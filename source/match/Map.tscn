@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b7c1crf36x1li"]
 
-[ext_resource type="Script" path="res://source/match/Map.gd" id="1_1svvv"]
+[ext_resource type="Script" uid="uid://6ca7m8y08kmx" path="res://source/match/Map.gd" id="1_1svvv"]
 [ext_resource type="Material" uid="uid://co8vfcoqqs5i8" path="res://source/match/resources/materials/terrain.material.tres" id="1_81yiw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ve5fg"]

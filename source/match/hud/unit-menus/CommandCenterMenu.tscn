@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d4iqf0mjt5ub3"]
 
-[ext_resource type="Script" path="res://source/match/hud/unit-menus/CommandCenterMenu.gd" id="1_88cbv"]
+[ext_resource type="Script" uid="uid://cmj2divdtjyc4" path="res://source/match/hud/unit-menus/CommandCenterMenu.gd" id="1_88cbv"]
 [ext_resource type="Texture2D" uid="uid://qw08xoss4lj0" path="res://assets/ui/icons/Worker.png" id="2_jkjj1"]
 
 [node name="CommandCenterMenu" type="GridContainer"]

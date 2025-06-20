@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://ct0ejt0trkhrf"]
 
-[ext_resource type="Script" path="res://source/match/units/CommandCenter.gd" id="1_hpo2s"]
+[ext_resource type="Script" uid="uid://l1ssj8arn866" path="res://source/match/units/CommandCenter.gd" id="1_hpo2s"]
 [ext_resource type="PackedScene" uid="uid://cgsi062w5fjia" path="res://source/match/units/traits/Highlight.tscn" id="2_c41i5"]
 [ext_resource type="PackedScene" uid="uid://bxx81l3t16rrs" path="res://source/match/units/structure-geometries/CommandCenter.tscn" id="2_hwq4d"]
 [ext_resource type="PackedScene" uid="uid://3c1h14nqdumt" path="res://source/match/units/traits/Selection.tscn" id="3_slmue"]

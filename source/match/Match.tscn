@@ -1,25 +1,25 @@
 [gd_scene load_steps=44 format=3 uid="uid://camns8fqod8d4"]
 
-[ext_resource type="Script" path="res://source/match/Match.gd" id="1_1555u"]
-[ext_resource type="Script" path="res://source/match/IsometricCamera3D.gd" id="1_qb2ry"]
-[ext_resource type="Script" path="res://source/match/FogOfWar.gd" id="5_eb52t"]
+[ext_resource type="Script" uid="uid://cpvek4mjd1qck" path="res://source/match/Match.gd" id="1_1555u"]
+[ext_resource type="Script" uid="uid://b6md1diokqyne" path="res://source/match/IsometricCamera3D.gd" id="1_qb2ry"]
+[ext_resource type="Script" uid="uid://dfovip22dif1c" path="res://source/match/FogOfWar.gd" id="5_eb52t"]
 [ext_resource type="PackedScene" uid="uid://co800e4shs7bh" path="res://source/generic-scenes-and-nodes/3d/RectangularSelection3D.tscn" id="5_yi0pu"]
 [ext_resource type="PackedScene" uid="uid://clbjgy724q2si" path="res://source/generic-scenes-and-nodes/2d/DynamicCircle2D.tscn" id="6_ux0ef"]
-[ext_resource type="Script" path="res://source/match/Terrain.gd" id="7_ccpu4"]
-[ext_resource type="Script" path="res://source/match/Navigation.gd" id="10_1wfp1"]
+[ext_resource type="Script" uid="uid://c3fbma07y7y4h" path="res://source/match/Terrain.gd" id="7_ccpu4"]
+[ext_resource type="Script" uid="uid://h0bnm12ewcyu" path="res://source/match/Navigation.gd" id="10_1wfp1"]
 [ext_resource type="PackedScene" uid="uid://b6n7cwv706x5n" path="res://source/match/debug/GodModeHud.tscn" id="10_p6gno"]
-[ext_resource type="Shader" path="res://source/shaders/3d/fog.gdshader" id="10_weh6c"]
-[ext_resource type="Shader" path="res://source/shaders/2d/blurr.gdshader" id="12_pow7t"]
+[ext_resource type="Shader" uid="uid://bkdplm1dyrhky" path="res://source/shaders/3d/fog.gdshader" id="10_weh6c"]
+[ext_resource type="Shader" uid="uid://cqaqxc1576w20" path="res://source/shaders/2d/blurr.gdshader" id="12_pow7t"]
 [ext_resource type="PackedScene" uid="uid://cwefaix6rye6k" path="res://source/match/hud/ResourcesBar.tscn" id="12_r13sk"]
 [ext_resource type="PackedScene" uid="uid://cwcedr6jj7yty" path="res://source/match/hud/UnitMenus.tscn" id="13_6cypl"]
-[ext_resource type="Shader" path="res://source/shaders/3d/simple_fog_of_war.gdshader" id="13_jo8b7"]
+[ext_resource type="Shader" uid="uid://dib45danfs3o8" path="res://source/shaders/3d/simple_fog_of_war.gdshader" id="13_jo8b7"]
 [ext_resource type="PackedScene" uid="uid://nnsih72ih7qr" path="res://source/match/hud/ProductionQueue.tscn" id="13_qv3xn"]
 [ext_resource type="PackedScene" uid="uid://dk7sa3fkyxks5" path="res://source/generic-scenes-and-nodes/control/RectangularSelection2D.tscn" id="16_ccb0o"]
-[ext_resource type="Script" path="res://source/match/AirNavigation.gd" id="16_ravsv"]
-[ext_resource type="Script" path="res://source/match/hud/Resources.gd" id="16_vjwpn"]
-[ext_resource type="Script" path="res://source/match/hud/Minimap.gd" id="17_0bfte"]
-[ext_resource type="Script" path="res://source/match/TerrainNavigation.gd" id="17_6fprk"]
-[ext_resource type="Shader" path="res://source/shaders/2d/white_transparent.gdshader" id="19_m1b2v"]
+[ext_resource type="Script" uid="uid://cw7mn54dfh1y7" path="res://source/match/AirNavigation.gd" id="16_ravsv"]
+[ext_resource type="Script" uid="uid://bnkyvsubusrpq" path="res://source/match/hud/Resources.gd" id="16_vjwpn"]
+[ext_resource type="Script" uid="uid://bu4elyv410ukb" path="res://source/match/hud/Minimap.gd" id="17_0bfte"]
+[ext_resource type="Script" uid="uid://cmglyjo4eswwb" path="res://source/match/TerrainNavigation.gd" id="17_6fprk"]
+[ext_resource type="Shader" uid="uid://bnhfe0178fupv" path="res://source/shaders/2d/white_transparent.gdshader" id="19_m1b2v"]
 [ext_resource type="PackedScene" uid="uid://c0uxy26e4qs4w" path="res://source/match/handlers/MouseClickAnimationsHandler.tscn" id="22_438pb"]
 [ext_resource type="PackedScene" uid="uid://1rby73ckmk7b" path="res://source/match/Menu.tscn" id="22_ofmlu"]
 [ext_resource type="PackedScene" uid="uid://b83l4dny3gly0" path="res://source/match/debug/FrameIncrementer.tscn" id="23_exhtd"]
@@ -75,10 +75,10 @@ resource_local_to_scene = true
 render_priority = 2
 shader = ExtResource("13_jo8b7")
 shader_parameter/color = Color(0, 0, 0, 1)
+shader_parameter/world_visibility_texture = SubResource("ViewportTexture_7yqgo")
 shader_parameter/texture_units_per_world_unit = 2
 shader_parameter/outer_margin_for_fade_out = 2.0
 shader_parameter/debug_texture_view = false
-shader_parameter/world_visibility_texture = SubResource("ViewportTexture_7yqgo")
 
 [sub_resource type="QuadMesh" id="QuadMesh_xttrh"]
 flip_faces = true
@@ -96,7 +96,6 @@ agent_radius = 0.8
 agent_max_climb = 0.0
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_exfwj"]
-geometry_parsed_geometry_type = 2
 geometry_collision_mask = 4278190082
 geometry_source_geometry_mode = 2
 geometry_source_group_name = &"terrain_navigation_input"

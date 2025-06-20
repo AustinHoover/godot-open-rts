@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dk3no87nfpp8i"]
 
-[ext_resource type="Script" path="res://source/match/hud/unit-menus/AircraftFactoryMenu.gd" id="1_l3uuu"]
+[ext_resource type="Script" uid="uid://cv35ps4i36ueb" path="res://source/match/hud/unit-menus/AircraftFactoryMenu.gd" id="1_l3uuu"]
 [ext_resource type="Texture2D" uid="uid://cffcxtqooabct" path="res://assets/ui/icons/Helicopter.png" id="2_5aqxt"]
 [ext_resource type="Texture2D" uid="uid://cjtwt8jdvjor7" path="res://assets/ui/icons/Drone.png" id="3_xeg5w"]
 
