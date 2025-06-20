@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://cq047cafmlboe"]
+
+[ext_resource type="Script" uid="uid://6ca7m8y08kmx" path="res://source/match/Map.gd" id="1_ayobx"]
+[ext_resource type="Material" uid="uid://co8vfcoqqs5i8" path="res://source/match/resources/materials/terrain.material.tres" id="2_qu2ve"]
+[ext_resource type="PackedScene" uid="uid://bf3jjdafqvh0w" path="res://source/match/units/non-player/ResourceA.tscn" id="3_doigu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ve5fg"]
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0fj4w"]
+size = Vector2(1000, 1000)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ypksr"]
+resource_local_to_scene = true
+material = ExtResource("2_qu2ve")
+size = Vector2(54, 54)
+center_offset = Vector3(25, 0, 25)
+
+[node name="Map" type="Node3D"]
+script = ExtResource("1_ayobx")
+
+[node name="Geometry" type="Node3D" parent="."]
+
+[node name="BlackBackgroundFixingAntiAliasingBug" type="MeshInstance3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+material_override = SubResource("StandardMaterial3D_ve5fg")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_0fj4w")
+
+[node name="Terrain" type="MeshInstance3D" parent="Geometry" groups=["terrain_navigation_input"]]
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_ypksr")
+
+[node name="SpawnPoints" type="Node3D" parent="."]
+
+[node name="Marker3D" type="Marker3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.28153, 0, 22.9186)
+
+[node name="Marker3D2" type="Marker3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.6172, 0, 27.8561)
+
+[node name="Marker3D3" type="Marker3D" parent="SpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.2368, -11.6719, 13.4188)
+
+[node name="Resources" type="Node3D" parent="."]
+
+[node name="Spot0" type="Node3D" parent="Resources"]
+
+[node name="ResourceA" parent="Resources/Spot0" instance=ExtResource("3_doigu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5028, 0, 33.3855)
+
+[node name="ResourceA2" parent="Resources/Spot0" instance=ExtResource("3_doigu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3834, -4.76837e-07, 36.1937)
+
+[node name="Spot1" type="Node3D" parent="Resources"]
+
+[node name="ResourceA3" parent="Resources/Spot1" instance=ExtResource("3_doigu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.0506, 0, 31.5435)
+
+[node name="ResourceA4" parent="Resources/Spot1" instance=ExtResource("3_doigu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.4899, 0, 37.0088)
+
+[node name="Decorations" type="Node3D" parent="."]

@@ -123,9 +123,16 @@ func _setup_player_units():
 		if not predefined_units.is_empty():
 			predefined_units.map(func(unit): _setup_unit_groups(unit, unit.player))
 		else:
-			_spawn_player_units(
-				player, map.find_child("SpawnPoints").get_child(player_index).global_transform
-			)
+			var spawnPoints = map.find_child("SpawnPoints")
+			if spawnPoints == null:
+				MatchSignals.match_aborted.emit()
+			elif spawnPoints.get_child_count() < player_index:
+				MatchSignals.match_aborted.emit()
+			else:
+				var spawnPoint = spawnPoints.get_child(player_index)
+				_spawn_player_units(
+					player, spawnPoint.global_transform
+				)
 
 
 func _spawn_player_units(player, spawn_transform):

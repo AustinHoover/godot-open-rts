@@ -15,6 +15,12 @@ const MAPS = {
 		"players": 8,
 		"size": Vector2i(100, 100),
 	},
+	"res://source/match/maps/TestArena.tscn":
+	{
+		"name": "Test Arena",
+		"players": 2,
+		"size": Vector2i(100, 100),
+	},
 }
 
 
